@@ -46,7 +46,7 @@ class ServerController extends ClientApiController
         $authUser = Auth::user();
 
         if ($authUser->id !== 1 && (int) $server->owner_id !== (int) $authUser->id) {
-            abort(403, '@𝗠𝗔𝗟𝗭𝗫𝗬𝗭 𝗣𝗥𝗢𝗧𝗘𝗖𝗧 • 𝗔𝗸𝘀𝗲𝘀 𝗗𝗶 𝗧𝗼𝗹𝗮𝗸❌. 𝗛𝗮𝗻𝘆𝗮 𝗕𝗶𝘀𝗮 𝗠𝗲𝗹𝗶𝗵𝗮𝘁 𝗦𝗲𝗿𝘃𝗲𝗿 𝗠𝗶𝗹𝗶𝗸 𝗦𝗲𝗻𝗱𝗶𝗿𝗶.');
+            abort(403, '@Akbar Protect • Akses Di Tolak❌. Hanya Bisa Melihat Server Milik Sendiri.');
         }
 
         return $this->fractal->item($server)
